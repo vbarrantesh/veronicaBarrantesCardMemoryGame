@@ -117,7 +117,6 @@ exports.bundle = series(
 exports.run = series(
     bundleCSS,
     bundleJS,
-
     browsersyncStart,
     watchTask
 );

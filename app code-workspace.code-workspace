@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "Card Memory Game",
+			"path": "./"
+		}
+	],
+	"settings": {
+		"editor.tabSize": 4,
+		"editor.tabCompletion": "on",
+		"editor.insertSpaces": true,
+		"liveServer.settings.multiRootWorkspaceName": "CMS",
+	}
+}
