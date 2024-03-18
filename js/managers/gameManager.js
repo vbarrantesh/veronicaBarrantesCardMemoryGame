@@ -1,6 +1,6 @@
 import { LoadingController } from "../controllers/loading/loadingController.js";
 
-import class GameManager {
+export class GameManager {
     contructor() {
         this.currentController = new LoadingController(document.body);
     }

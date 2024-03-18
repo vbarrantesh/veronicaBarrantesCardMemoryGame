@@ -4,7 +4,7 @@ export class View {
     constructor(parent, controller = null) {
         this.parent = parent;
         this.controller = controller;
-        this.containers = div({}, this.parent);
+        this.container = div({}, this.parent);
 
     }
 }
