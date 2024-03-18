@@ -1,2 +1,2 @@
-# veronicaBarrantesCardMemoryGame
-A card memory game on JS
+# estebanPadillaCardMemoryGame
+A card memory game on JS.

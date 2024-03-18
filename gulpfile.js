@@ -29,7 +29,7 @@ function browsersyncStart(cd) {
 
 function browsersyncReload(cd) {
     bundleCSS();
-    bundleProyect();
+    bundleJS();
     browsersync.reload();
     cd();
 };
@@ -48,7 +48,7 @@ function cleanZip() {
         .pipe(clean());
 };
 
-const bundleProyect = async function () {
+const bundleJS = async function() {
 
     var input = 'js/main.js';;
     console.log('-> BUNDLE PROYECT');
@@ -88,7 +88,7 @@ function bundleCSS() {
 
     return src('css/**/*.css')
         .pipe(concat('dist/bundle.css'))
-        .on('data', function (file) {
+        .on('data', function(file) {
             const bufferFile = new cleanCSS(options).minify(file.contents)
             return file.contents = Buffer.from(bufferFile.styles)
         })
@@ -96,7 +96,7 @@ function bundleCSS() {
 };
 
 function firebase(cb) {
-    exec('firebase deploy', function (err, stdout, stderr) {
+    exec('firebase deploy', function(err, stdout, stderr) {
         console.log(stdout);
         console.log(stderr);
         cb(err);
@@ -105,16 +105,19 @@ function firebase(cb) {
 
 exports.deploy = series(
     bundleCSS,
-    bundleProyect,
+    bundleJS,
     firebase
 );
 
 exports.bundle = series(
     bundleCSS,
-    bundleProyect
+    bundleJS
 );
 
 exports.run = series(
+    bundleCSS,
+    bundleJS,
+
     browsersyncStart,
     watchTask
 );
