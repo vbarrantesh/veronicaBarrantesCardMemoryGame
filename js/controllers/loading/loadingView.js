@@ -1,7 +1,8 @@
-import { View } from "../../views/view.js";
+import { BaseView } from "../../views/baseView.js";
 
-export class LoadingView extends View {
-    contructor(parent, controller) {
+export class LoadingView extends BaseView {
+    constructor(parent, controller) {
+        // super(parent, controller);
         super(parent, controller);
 
 
@@ -9,3 +10,5 @@ export class LoadingView extends View {
 
 
 }
+
+customElements.define('loading-view', LoadingView);
