@@ -1,0 +1,14 @@
+.loadingView {
+    flex-direction: column;
+}
+
+.loadingView-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.loadingView-spinner {
+    width: 128px;
+    height: 128px;
+    background: url('../assets/images/spinner.svg');
+}
