@@ -13,14 +13,13 @@ export class LoadingController extends Controller {
     delete() {
         let event = new CustomEvent('goto-state', {
             detail: {
-                state: MENU_STATE,
+                state: MENU_STATE
             },
             bubbles: true,
             cancelable: true,
             composed: false
         });
         this.view.dispatchEvent(event);
-        //Animate out
         super.delete();
     }
 }

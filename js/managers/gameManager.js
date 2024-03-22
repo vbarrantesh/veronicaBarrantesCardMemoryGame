@@ -1,26 +1,22 @@
 import { div } from "../libs/html.js";
 import { LoadingController } from "../controllers/loading/loadingController.js";
 import { MenuController } from "../controllers/menu/menuController.js";
-import { BaseView } from "../views/baseView.js";
-import { LoadingView } from "../controllers/loading/loadingView.js";
-
 
 export class GameManager {
-
     constructor() {
-
         this.mainContainer = div({ className: 'mainContainer' }, document.body);
         this.navbarContainer = div({ className: 'navbarContainer' }, this.mainContainer);
         this.contentContainer = div({ className: 'contentContainer' }, this.mainContainer);
         this.currentController = null;
 
-        this.mainContainer.addEventListener('loading-complete', (event) => {
+        this.mainContainer.addEventListener('loading-completed', (event) => {
             this.loadingCompleted();
         });
 
         this.mainContainer.addEventListener('goto-state', (event) => {
             this.goto(event.detail.state);
         });
+
         this.goto(LOADING_STATE);
     }
 
@@ -37,12 +33,11 @@ export class GameManager {
             default:
                 break;
         }
-
     }
 
     loadingCompleted() {
-        //Do this with the data
-        this.currentController.delete();
+        //Do things with the data
+        // this.currentController.delete();
     }
 }
 

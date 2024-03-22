@@ -1,6 +1,6 @@
 export class LoadingService {
-    constructor(controller) {
-        this.controller = controller;
+    constructor(contoller) {
+        this.contoller = contoller;
         this.getInitialData();
     }
 
@@ -14,7 +14,7 @@ export class LoadingService {
                 cancelable: true,
                 composed: false
             });
-            this.controller.view.dispatchEvent(event);
-        }, 1000);
+            this.contoller.view.dispatchEvent(event);
+        }, 3000);
     }
 }

@@ -10,5 +10,5 @@
 .loadingView-spinner {
     width: 128px;
     height: 128px;
-    background: url('../assets/images/spinner.svg');
+    background: url(../assets/images/spinner.svg);
 }

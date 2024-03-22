@@ -6,7 +6,7 @@ export class BaseView extends HTMLElement {
         this.parent = parent;
         this.controller = controller;
         this.parent.appendChild(this);
-        this.className = "BaseView";
+        this.className = 'baseView';
     }
 
     delete() {
