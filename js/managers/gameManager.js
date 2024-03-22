@@ -37,7 +37,7 @@ export class GameManager {
 
     loadingCompleted() {
         //Do things with the data
-        // this.currentController.delete();
+        this.currentController.delete();
     }
 }
 
