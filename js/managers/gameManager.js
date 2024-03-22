@@ -21,7 +21,6 @@ export class GameManager {
         this.mainContainer.addEventListener('goto-state', (event) => {
             this.goto(event.detail.state);
         });
-
         this.goto(LOADING_STATE);
     }
 

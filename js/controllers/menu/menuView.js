@@ -4,7 +4,7 @@ import { BaseView } from "../../views/baseView.js";
 export class MenuView extends BaseView {
     constructor(parent, controller) {
         super(parent, controller);
-        this.classList = add('menu-view');
+        this.classList.add('menu-view');
         this.innerHTML = 'MENU';
         //this.classList.add("menuView");
     }
