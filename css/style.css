@@ -18,14 +18,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
-    color: var(--primary-color)
-}
-
-h2 {
-    color: var(--secondary-color)
-}
-
 button {
     min-width: 60px;
     border-style: none;
@@ -47,7 +39,7 @@ button:focus {
 
 .mainContainer {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -64,4 +56,22 @@ button:focus {
     width: 100%;
     height: 100%;
     background-color: var(--background-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gameButton {
+    /*height: 80px;*/
+    width: 50%;
+    background-color: #FC0366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: solid black 1.5px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
