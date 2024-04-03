@@ -10,7 +10,7 @@ export class LoadingController extends Controller {
         this.service = new LoadingService(this);
     }
 
-    delete() {
+    /*delete() {
         let event = new CustomEvent('goto-state', {
             detail: {
                 state: MENU_STATE
@@ -21,5 +21,5 @@ export class LoadingController extends Controller {
         });
         this.view.dispatchEvent(event);
         super.delete();
-    }
+    }*/
 }

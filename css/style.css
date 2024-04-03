@@ -5,6 +5,9 @@
 * @version 1.0.0
 */
 
+
+/*revisar el color cuando corra*/
+
 :root {
     --primary-color: #D406DE;
     --secondary-color: rgb(51, 25, 249);
@@ -15,7 +18,13 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+h1 {
+    font-weight: bold;
+    color: #fff;
+    font-size: 28px;
 }
 
 button {
@@ -39,17 +48,11 @@ button:focus {
 
 .mainContainer {
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-}
-
-.navbarContainer {
-    width: 100%;
-    height: var(--navBar-height);
-    background-color: var(--primary-color);
 }
 
 .contentContainer {
@@ -63,8 +66,8 @@ button:focus {
 }
 
 .gameButton {
-    /*height: 80px;*/
-    width: 50%;
+    height: 20px;
+    width: 150px;
     background-color: #FC0366;
     display: flex;
     justify-content: center;
@@ -72,6 +75,14 @@ button:focus {
     border-radius: 10px;
     border: solid black 1.5px;
     margin-bottom: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.hidden {
+    display: none !important;
 }

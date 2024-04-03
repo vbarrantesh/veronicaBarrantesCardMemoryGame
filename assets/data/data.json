@@ -1,0 +1,64 @@
+{
+    "cards": [{
+            "id": 1,
+            "emoji": "😀",
+            "isDiscovered": false,
+            "isSelected": false
+        },
+        {
+            "id": 2,
+            "emoji": "😄",
+            "isDiscovered": false,
+            "isSelected": false
+        },
+        {
+            "id": 3,
+            "emoji": "😆",
+            "isDiscovered": false,
+            "isSelected": false
+        },
+        {
+            "id": 4,
+            "emoji": "🤣",
+            "isDiscovered": false,
+            "isSelected": false
+        },
+        {
+            "id": 4,
+            "emoji": "🤢",
+            "isDiscovered": false,
+            "isSelected": false
+        }, {
+
+            "id": 1,
+            "emoji": "😀",
+            "isDiscovered": false,
+            "isSelected": false
+        },
+        {
+            "id": 2,
+            "emoji": "😄",
+            "isDiscovered": false,
+            "isSelected": false
+        },
+        {
+            "id": 3,
+            "emoji": "😆",
+            "isDiscovered": false,
+            "isSelected": false
+        },
+        {
+            "id": 4,
+            "emoji": "🤣",
+            "isDiscovered": false,
+            "isSelected": false
+        },
+        {
+            "id": 4,
+            "emoji": "🤢",
+            "isDiscovered": false,
+            "isSelected": false
+        }
+
+    ]
+}

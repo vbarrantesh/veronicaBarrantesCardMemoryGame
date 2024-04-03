@@ -1,0 +1,33 @@
+.navbarContainer {
+    width: 100%;
+    height: var(--navBar-height);
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+
+/*Revisar el estilo cuando lo pueda correr*/
+
+.navbarContainer-backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    border: 3px solid #fff;
+    width: 50px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.navbarContainer-title {
+    font-size: 25px !important;
+}
+
+
+/*
+.navbarContainer-backBtn{
+    background-color: aqua;
+    width: 40px;
+
+}*/

@@ -1,3 +1,5 @@
+import { MENU_STATE } from "../../managers/gameManager";
+
 export class LoadingService {
     constructor(contoller) {
         this.contoller = contoller;
@@ -6,9 +8,9 @@ export class LoadingService {
 
     getInitialData() {
         window.setTimeout(() => {
-            let event = new CustomEvent('loading-completed', {
+            let event = new CustomEvent('goto-state', {
                 detail: {
-                    state: 'state'
+                    state: 'MENU_STATE'
                 },
                 bubbles: true,
                 cancelable: true,
