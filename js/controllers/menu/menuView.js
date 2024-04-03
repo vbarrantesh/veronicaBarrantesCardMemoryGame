@@ -1,5 +1,5 @@
 import { div, h1, span, img } from "../../libs/html.js";
-import { MENU_STATE, LOGIN_STATE, SCORES_STATE, LANGUAGE_STATE, CREDITS_STATE, THEME_STATE, DIFFICULTY_STATE, PLAY_STATE } from "../../managers/gameManager.js";
+import { LOGIN_STATE, SCORES_STATE, LANGUAGE_STATE, CREDITS_STATE, THEME_STATE, DIFFICULTY_STATE, PLAY_STATE } from "../../managers/gameManager.js";
 import { BaseView } from "../../views/baseView.js";
 import { GameButton } from "../../views/gameButton.js";
 
@@ -18,7 +18,7 @@ export class MenuView extends BaseView {
         let icon = img({ className: 'logoIcon', src: iconURL }, divImg);
 
         let btnStart = new GameButton(this, 'Start', () => {
-            this.onGameButtonClick(PLAY_STATE);
+            this.onMenuButtonClick(PLAY_STATE);
         });
         btnStart.classList.add('menuView-btnStart');
 
@@ -37,7 +37,7 @@ export class MenuView extends BaseView {
         new GameButton(divThree, 'Language', () => { this.onMenuButtonClick(LANGUAGE_STATE); });
     }
 
-    onMenubuttonClick(state) {
+    onMenuButtonClick(state) {
         let event = new CustomEvent('goto-state', {
             detail: {
                 state: state
@@ -48,7 +48,6 @@ export class MenuView extends BaseView {
         });
         this.dispatchEvent(event);
     }
-
 }
 
 customElements.define('menu-view', MenuView);

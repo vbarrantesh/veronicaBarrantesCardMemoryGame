@@ -5,10 +5,9 @@ import { CardView } from "./cardView.js";
 export class PlayView extends BaseView {
     constructor(parent, controller) {
         super(parent, controller);
-        this.className = "PlayView";
-
+        this.className = "playView";
         this.cardsContainer = div({ className: 'playView-cardsContainer' }, this);
-        this.cardView = [];
+        this.cardViews = [];
     }
     showCards(cards) {
         cards.forEach(card => {
@@ -16,8 +15,8 @@ export class PlayView extends BaseView {
         });
     }
 
-    onCardSelected(card) {
-        this.controller.onCardViewSelection();
+    onCardSelected() {
+        this.controller.onCardSelection();
     }
 
     resetCards() {

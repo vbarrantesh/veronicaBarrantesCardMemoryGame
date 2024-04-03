@@ -55,7 +55,7 @@ export class PlayController extends Controller {
     }
 
     triggerShowCardEvent() {
-        let event = new CustomeEvent('show-card', {
+        let event = new CustomEvent('show-card', {
             detail: {
                 state: ''
             },

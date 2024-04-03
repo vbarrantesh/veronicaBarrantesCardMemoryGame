@@ -6,7 +6,7 @@ export class GameButton extends BaseView {
         this.className = "gameButton"
         this.innerHTML = title;
         this.onclick = () => {
-            gsap.to(this, { scale: 1.05, duration: 0.15, ease: "expo.in", yoyo: true, repeat: 1 });
+            gsap.to(this, { scale: 1.1, duration: 0.15, ease: "expo.in", yoyo: true, repeat: 1 });
             callback();
         }
     }

@@ -16,7 +16,7 @@ export class GameManager {
         this.appTitle = span({ className: 'navbarContainer-title', innerHTML: '' }, this.navbarContainer);
 
         this.mainContainer.addEventListener('loading-completed', (event) => {
-            // this.loadingCompleted();
+            this.loadingCompleted();
         });
 
         this.mainContainer.addEventListener('goto-state', (event) => {
@@ -24,6 +24,7 @@ export class GameManager {
         });
 
         this.goto(LOADING_STATE);
+
         // this.goto(PLAY_STATE);
     }
 
@@ -45,7 +46,6 @@ export class GameManager {
             case MENU_STATE:
                 this.appTitle.innerHTML = 'HOME';
                 this.currentController = new MenuController(this.contentContainer);
-
                 break;
             case LOGIN_STATE:
                 this.appTitle.innerHTML = 'LOGIN';
