@@ -7,6 +7,8 @@ export class LoadingService {
     }
 
     getInitialData() {
+
+        //VERO: El problema es que estas pasando como estado un string y no la constante MENU_STATE, quitale las comillas a 'MENU_STATE'
         window.setTimeout(() => {
             let event = new CustomEvent('goto-state', {
                 detail: {
