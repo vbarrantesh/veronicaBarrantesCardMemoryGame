@@ -4,7 +4,7 @@ export class PlayService {
         this.getData();
     }
     getData() {
-        fetch('../../assets/data/data.json').then(response => {
+        fetch('http://localhost:4000/cards/1').then(response => {
             response.json().then(data => {
                 this.controller.show(data.cards);
             }).catch(error => {

@@ -4,20 +4,48 @@
     background-color: var(--primary-color);
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 
 /*Revisar el estilo cuando lo pueda correr*/
 
-.navbarContainer-backBtn {
+
+/*
+.navbarContainer-navbarElements {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    align-content: space-around;
-    border: 3px solid #fff;
+    align-content: space-between;
+    width: 100%;
+}*/
+
+.navbarContainer-backBtn {
+    display: absolute;
+    text-align: center;
+    background-color: #00FD07;
     width: 50px;
+    border: 3px solid #fff;
     padding: 5px;
     border-radius: 15px;
+    font-weight: bold;
+    left: 10px;
+    top: 5px;
+}
+
+.navbarContainer-resetBtn {
+    display: absolute;
+    text-align: center;
+    background-color: #00FD07;
+    width: 50px;
+    border: 3px solid #fff;
+    padding: 5px;
+    border-radius: 15px;
+    font-weight: bold;
+    float: right;
+    top: 5px;
 }
 
 .navbarContainer-title {
@@ -31,3 +59,21 @@
     width: 40px;
 
 }*/
+
+.navbarContainer-hubContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbarContainer-timeTitle {
+    font-size: 16px !important;
+}
+
+.navbarContainer-timeLbl {
+    font-size: 25px !important;
+    color: white;
+}

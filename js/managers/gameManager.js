@@ -11,12 +11,33 @@ export class GameManager {
         this.contentContainer = div({ className: 'contentContainer' }, this.mainContainer);
         this.currentController = null;
 
-        this.backBtn = div({ className: 'navbarContainer-backBtn', innerHTML: 'Back', onclick: this.onBackBtn.bind(this) }, this.navbarContainer);
-        // div({ className: 'navbarContainer-backArrow', innerHTML: 'Back' }, this.backBtn);
+        //this.navbarElements = div({ className: 'navbarContainer-navbarElements' }, this.navbarContainer);
+
+        this.backBtn = div({ className: 'navbarContainer-backBtn hidden', innerHTML: 'Back', onclick: this.onBackBtn.bind(this) }, this.navbarContainer);
+
         this.appTitle = span({ className: 'navbarContainer-title', innerHTML: '' }, this.navbarContainer);
+
+        this.hudColumn1 = div({ className: 'navbarContainer-hubContainer hidden' }, this.navbarContainer);
+        this.timeTitle = span({ className: 'navbarContainer-timeTitle', innerHTML: 'Timer' }, this.hudColumn1);
+        this.timeLbl = span({ className: 'navbarContainer-timeLbl', innerHTML: '0' }, this.hudColumn1);
+
+        this.hudColumn2 = div({ className: 'navbarContainer-hubContainer hidden' }, this.navbarContainer);
+        this.clicksTitle = span({ className: 'navbarContainer-timeTitle', innerHTML: 'Clicks' }, this.hudColumn2);
+        this.clicksLbl = span({ className: 'navbarContainer-timeLbl', innerHTML: '0' }, this.hudColumn2);
+
+        this.resetBtn = div({ className: 'navbarContainer-resetBtn hidden', innerHTML: 'Reset', onclick: this.onResetBtn.bind(this) }, this.navbarContainer);
+        //div({ className: 'navbarContainer-resetTitle', innerHTML: 'Reset' }, this.resetBtn);
 
         this.mainContainer.addEventListener('loading-completed', (event) => {
             this.loadingCompleted();
+        });
+
+        this.mainContainer.addEventListener('update-play-game-time', (event) => {
+            this.timeLbl.innerHTML = event.detail.time;
+        });
+
+        this.mainContainer.addEventListener('update-clicks', (event) => {
+            this.clicksLbl.innerHTML = event.detail.clicks;
         });
 
         this.mainContainer.addEventListener('goto-state', (event) => {
@@ -25,7 +46,7 @@ export class GameManager {
 
         this.goto(LOADING_STATE);
 
-        // this.goto(PLAY_STATE);
+        //this.goto(PLAY_STATE);
     }
 
     goto(state) {
@@ -36,6 +57,10 @@ export class GameManager {
 
         if (state === MENU_STATE || state === LOADING_STATE) {
             this.backBtn.classList.add('hidden');
+            this.appTitle.classList.remove('hidden');
+            this.hudColumn1.classList.add('hidden');
+            this.hudColumn2.classList.add('hidden');
+            this.resetBtn.classList.add('hidden');
         } else {
             this.backBtn.classList.remove('hidden');
         }
@@ -70,7 +95,10 @@ export class GameManager {
 
                 break;
             case PLAY_STATE:
-                this.appTitle.innerHTML = 'PLAY';
+                this.appTitle.classList.add('hidden');
+                this.hudColumn1.classList.remove('hidden');
+                this.hudColumn2.classList.remove('hidden');
+                this.resetBtn.classList.remove('hidden');
                 this.currentController = new PlayController(this.contentContainer);
                 break;
 
@@ -87,6 +115,13 @@ export class GameManager {
     onBackBtn() {
         this.goto(MENU_STATE);
     }
+
+    onResetBtn() {
+        this.timeLbl.innerHTML = 0;
+        this.goto(PLAY_STATE);
+    }
+
+
 }
 
 export const LOADING_STATE = 0;

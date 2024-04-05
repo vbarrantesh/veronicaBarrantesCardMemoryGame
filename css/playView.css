@@ -1,8 +1,8 @@
 .playView {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap;*/
     background-color: azure;
     width: 100%;
     height: 100%;
@@ -17,4 +17,15 @@
     /*camnhiar*/
     width: 90%;
     height: 400px;
+}
+
+.playView.hubContainer {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    height: var(--navBar-height);
+    width: 85%;
+    background-color: blanchedalmond;
+    /*Camnbiar color*/
+    margin-bottom: 10px;
 }

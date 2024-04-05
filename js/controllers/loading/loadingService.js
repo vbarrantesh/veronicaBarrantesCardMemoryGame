@@ -12,7 +12,7 @@ export class LoadingService {
         window.setTimeout(() => {
             let event = new CustomEvent('goto-state', {
                 detail: {
-                    state: 'MENU_STATE'
+                    state: MENU_STATE
                 },
                 bubbles: true,
                 cancelable: true,

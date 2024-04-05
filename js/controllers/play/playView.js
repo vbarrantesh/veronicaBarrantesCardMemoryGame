@@ -5,6 +5,7 @@ import { CardView } from "./cardView.js";
 export class PlayView extends BaseView {
     constructor(parent, controller) {
         super(parent, controller);
+
         this.className = "playView";
         this.cardsContainer = div({ className: 'playView-cardsContainer' }, this);
         this.cardViews = [];
