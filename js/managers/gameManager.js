@@ -118,6 +118,7 @@ export class GameManager {
 
     onResetBtn() {
         this.timeLbl.innerHTML = 0;
+        this.clicksLbl.innerHTML = 0;
         this.goto(PLAY_STATE);
     }
 
