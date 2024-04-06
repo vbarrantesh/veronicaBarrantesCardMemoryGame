@@ -1,0 +1,66 @@
+@media (min-width: 769px) and (max-width: 1025px) {
+    .menuView-logoIcon {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    h1 {
+        font-size: 24px !important;
+    }
+    .divTitle,
+    .divOne,
+    .divTwo,
+    .divThree {
+        margin: 15px 0px 15px 0px !important;
+    }
+    .menuView-btnStart {
+        background-color: #00FD07 !important;
+        width: 10px !important;
+        padding: 20px !important;
+        color: black !important;
+    }
+    .gameButton {
+        height: 30px;
+        width: 140px !important;
+        padding: 30px 10px 30px 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 668px) {
+    h1 {
+        font-size: 22px !important;
+    }
+}
+
+
+/*
+@media (max-width: 655px) {
+    h1 {
+        font-size: 24px!important;
+    }
+    .menuView-logoIcon {
+        width: 200px;
+        height: 200px;
+    }
+    .divTitle,
+    .divOne,
+    .divTwo,
+    .divThree {
+        margin: 25px 0px 25px 0px;
+    }
+    .divOne,
+    .divTwo,
+    .divThree {
+        width: 280px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menuView-btnStart {
+        background-color: #00FD07 !important;
+        width: 140px !important;
+        padding: 20px !important;
+        color: black !important;
+    }
+}*/

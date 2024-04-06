@@ -1,4 +1,3 @@
-//import { div, span } from "../libs/html.js";
 import { BaseView } from "../../views/baseView.js";
 
 export class CardView extends BaseView {

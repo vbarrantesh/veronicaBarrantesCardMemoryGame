@@ -8,7 +8,11 @@
 }
 
 .loadingView-spinner {
-    width: 128px;
-    height: 128px;
-    background: url(../assets/images/spinner.svg);
+    width: 230px;
+    height: 230px;
+    /*background: url(../assets/images/spinner.svg);*/
+    background: url(../assets/images/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }

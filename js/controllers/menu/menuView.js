@@ -12,10 +12,10 @@ export class MenuView extends BaseView {
         let divTitle = div({ className: 'divTitle' }, this);
         h1({ innerHTML: 'Improve your mental <br> agility and have fun!<br>' }, divTitle);
 
-        let divImg = div({ className: 'divImg' }, this);
+        div({ className: 'menuView-logoIcon' }, this);
         //revisar la imagen
-        let iconURL = "assets/images/logo.png";
-        let icon = img({ className: 'logoIcon', src: iconURL }, divImg);
+        //  let iconURL = "assets/images/logo.png";
+        // let icon = img({ className: 'logoIcon', src: iconURL }, divImg);
 
         let btnStart = new GameButton(this, 'Start', () => {
             this.onMenuButtonClick(PLAY_STATE);

@@ -24,18 +24,7 @@
 h1 {
     font-weight: bold;
     color: #fff;
-    font-size: 28px;
-}
-
-button {
-    min-width: 60px;
-    border-style: none;
-    padding: 10px 10px 10px 10px;
-    margin: 5px 5px 5px 5px;
-    font-weight: bold;
-    color: white;
-    background-color: var(--secondary-color);
-    outline: none;
+    font-size: 26px;
 }
 
 button:focus {
@@ -66,16 +55,15 @@ button:focus {
 }
 
 .gameButton {
-    height: 20px;
-    width: 150px;
+    height: 10px;
+    width: 120px;
     background-color: #FC0366;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     border: solid black 1.5px;
-    margin-bottom: 10px;
-    padding: 20px;
+    padding: 20px 5px 20px 5px;
     font-family: "Lucida Console", Monaco, monospace;
     font-weight: bold;
     color: #fff;
