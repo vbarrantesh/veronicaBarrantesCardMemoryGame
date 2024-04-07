@@ -2,21 +2,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 80px;
-    background-color: aqua;
-    /*cambiar colores*/
-    font-size: 45px;
-    border-width: 4px;
+    width: 100px;
+    height: 100px;
+    background-color: var(--first-color);
+    font-size: 60px;
+    border-width: 5px;
     border-style: solid;
     border-color: white;
     box-sizing: border-box;
     cursor: pointer;
     user-select: none;
+    margin: 5px
 }
 
 .cardView-isDiscovered {
-    background-color: blue;
+    background-color: var(--fourth-color);
     /*cambiar*/
     pointer-events: none !important;
 }

@@ -38,7 +38,7 @@
 
 .menuView-btnStart {
     background-color: #00FD07 !important;
-    width: 150px !important;
+    width: 150px;
     padding: 20px !important;
     color: black !important;
 }

@@ -1,7 +1,7 @@
 .navbarContainer {
     width: 100%;
     height: var(--navBar-height);
-    background-color: var(--primary-color);
+    background-color: var(--first-color);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -10,17 +10,6 @@
 
 
 /*Revisar el estilo cuando lo pueda correr*/
-
-
-/*
-.navbarContainer-navbarElements {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    align-content: space-between;
-    width: 100%;
-}*/
 
 .navbarContainer-backBtn {
     display: absolute;
@@ -54,14 +43,6 @@
     font-weight: bold;
 }
 
-
-/*
-.navbarContainer-backBtn{
-    background-color: aqua;
-    width: 40px;
-
-}*/
-
 .navbarContainer-hubContainer {
     display: flex;
     justify-content: center;
@@ -73,6 +54,8 @@
 
 .navbarContainer-timeTitle {
     font-size: 16px !important;
+    color: white;
+    font-weight: bold;
 }
 
 .navbarContainer-timeLbl {
