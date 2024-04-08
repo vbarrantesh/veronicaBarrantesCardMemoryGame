@@ -1,78 +1,33 @@
-/*@media (min-width: 769px) and (max-width: 1025px) {
-    .menuView-logoIcon {
-        width: 200px !important;
-        height: 200px !important;
-    }
+@media (min-width: 200px) and (max-width: 280px) {
     h1 {
-        font-size: 24px !important;
+        font-size: 20px !important;
     }
-    .divTitle,
+    .menuView-logoIcon {
+        width: 180px !important;
+        height: 180px !important;
+    }
     .divOne,
     .divTwo,
     .divThree {
-        margin: 15px 0px 15px 0px !important;
-    }
-    .menuView-btnStart {
-        background-color: #00FD07 !important;
-        width: 10px !important;
-        padding: 20px !important;
-        color: black !important;
+        margin: 15px 0px 15px 0px;
     }
     .gameButton {
-        height: 30px;
-        width: 140px !important;
-        padding: 30px 10px 30px 10px;
-        margin-left: 5px;
-        margin-right: 5px;
+        font-size: 18px !important;
+        padding: 15px 10px !important;
+    }
+    /*vista de los cards*/
+    .playView-cardsContainer {
+        min-height: 400px !important;
+        padding: 10px 5px 10px 5px !important;
+    }
+    .cardView {
+        width: 65px;
+        height: 65px;
+        margin: 2px !important;
     }
 }
 
-@media (min-width: 375px) and (max-width: 668px) {
-    h1 {
-        font-size: 22px !important;
-    }
-}*/
-
-
-/*
-@media (max-width: 655px) {
-    h1 {
-        font-size: 24px!important;
-    }
-    .menuView-logoIcon {
-        width: 200px;
-        height: 200px;
-    }
-    .divTitle,
-    .divOne,
-    .divTwo,
-    .divThree {
-        margin: 25px 0px 25px 0px;
-    }
-    .divOne,
-    .divTwo,
-    .divThree {
-        width: 280px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .menuView-btnStart {
-        background-color: #00FD07 !important;
-        width: 140px !important;
-        padding: 20px !important;
-        color: black !important;
-    }
-}*/
-
-
-/*revisar la propuedad del .navbarContainer-title {
-    font-size: 30px !important;
-    color: #fff;
-    font-weight: bold;
-}*/
-
-@media (min-width: 280px) and (max-width: 374px) {
+@media (min-width: 281px) and (max-width: 374px) {
     h1 {
         font-size: 22px !important;
     }
@@ -88,9 +43,19 @@
     .gameButton {
         font-size: 18px !important;
     }
+    /*vista de los cards*/
+    .playView-cardsContainer {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .cardView {
+        width: 70px;
+        height: 70px;
+        margin: 2px !important;
+    }
 }
 
-@media (min-width: 375px) and (max-width: 413px) {
+@media (min-width: 375px) and (max-width: 389px) {
     h1 {
         font-size: 26px !important;
     }
@@ -106,9 +71,45 @@
     .gameButton {
         font-size: 18px !important;
     }
+    /*vista de los cards*/
+    .playView-cardsContainer {
+        padding: 0px 10px 0px 10px !important;
+    }
+    .cardView {
+        width: 80px;
+        height: 80px;
+        margin: 2px !important;
+    }
 }
 
-@media (min-width: 414px) and (max-width: 590px) {
+@media (min-width: 390px) and (max-width: 412px) {
+    h1 {
+        font-size: 26px !important;
+    }
+    .menuView-logoIcon {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    .divOne,
+    .divTwo,
+    .divThree {
+        margin-top: 20px !important;
+    }
+    .gameButton {
+        font-size: 18px !important;
+    }
+    /*vista de los cards*/
+    .playView-cardsContainer {
+        padding: 10px 5px 10px 5px !important;
+    }
+    .cardView {
+        width: 80px;
+        height: 80px;
+        margin: 2px !important;
+    }
+}
+
+@media (min-width: 413px) and (max-width: 428px) {
     .menuView-btnStart {
         width: 100px !important;
         padding: 20px !important;
@@ -125,11 +126,98 @@
         height: 10px;
         width: 140px !important;
     }
+    /*vista de los cards*/
+    .cardView {
+        width: 80px;
+        height: 80px;
+        margin: 2px !important;
+    }
 }
 
-@media (max-width: 281px) {}
+@media (min-width: 429px) and (max-width: 520px) {
+    .menuView-btnStart {
+        width: 100px !important;
+        padding: 20px !important;
+        color: black !important;
+    }
+    .divOne,
+    .divTwo,
+    .divThree {
+        width: 320px;
+        margin: 20px 0px 0px 0px;
+    }
+    .gameButton {
+        font-size: 22px !important;
+        height: 10px;
+        width: 140px !important;
+    }
+    /*vista de los cards*/
+    .cardView {
+        width: 90px;
+        height: 90px;
+        margin: 2px !important;
+    }
+}
 
-@media (min-width: 591px) and (max-width: 1024px) {
+@media (min-width: 521px) and (max-width: 576px) {
+    .menuView-btnStart {
+        width: 100px !important;
+        padding: 20px !important;
+        color: black !important;
+    }
+    .divOne,
+    .divTwo,
+    .divThree {
+        width: 320px;
+        margin: 20px 0px 0px 0px;
+    }
+    .gameButton {
+        font-size: 22px !important;
+        height: 10px;
+        width: 140px !important;
+    }
+    /*vista de los cards*/
+    .playView-cardsContainer {
+        min-height: 400px !important;
+        padding: 5px !important;
+    }
+    .cardView {
+        width: 100px;
+        height: 100px;
+        margin: 2px !important;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 589px) {
+    .menuView-btnStart {
+        width: 100px !important;
+        padding: 20px !important;
+        color: black !important;
+    }
+    .divOne,
+    .divTwo,
+    .divThree {
+        width: 320px;
+        margin: 20px 0px 0px 0px;
+    }
+    .gameButton {
+        font-size: 22px !important;
+        height: 10px;
+        width: 140px !important;
+    }
+    /*vista de los cards*/
+    .playView-cardsContainer {
+        min-height: 400px !important;
+        padding: 5px !important;
+    }
+    .cardView {
+        width: 80px;
+        height: 80px;
+        margin: 2px !important;
+    }
+}
+
+@media (min-width: 590px) and (max-width: 839px) {
     h1 {
         font-size: 30px !important;
     }
@@ -146,5 +234,104 @@
     .gameButton {
         font-size: 22px !important;
         width: 140px !important;
+    }
+    /*vista de los cards*/
+    .playView-cardsContainer {
+        min-height: 400px !important;
+        padding: 10px 5px 10px 5px !important;
+    }
+    .cardView {
+        width: 80px;
+        height: 80px;
+        margin: 2px !important;
+    }
+}
+
+@media (min-width: 840px) and (max-width: 932px) {
+    h1 {
+        font-size: 30px !important;
+    }
+    .divOne,
+    .divTwo,
+    .divThree {
+        width: 350px !important;
+        margin-top: 20px !important;
+    }
+    .menuView-logoIcon {
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .gameButton {
+        font-size: 24px !important;
+        padding: 15px 10px !important;
+        width: 150px !important;
+    }
+    .menuView-btnStart {
+        width: 200px !important;
+    }
+    /*vista de los cards*/
+    .cardView {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (min-width: 933px) and (max-width: 964px) {
+    h1 {
+        font-size: 30px !important;
+    }
+    .divOne,
+    .divTwo,
+    .divThree {
+        width: 350px !important;
+        margin-top: 20px !important;
+    }
+    .menuView-logoIcon {
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .gameButton {
+        font-size: 24px !important;
+        padding: 15px 10px !important;
+        width: 150px !important;
+    }
+    .menuView-btnStart {
+        width: 200px !important;
+    }
+    /*vista de los cards*/
+    .cardView {
+        width: 120px;
+        height: 120px;
+        margin: 2px !important;
+    }
+}
+
+@media (min-width: 965px) and (max-width: 1025px) {
+    h1 {
+        font-size: 30px !important;
+    }
+    .divOne,
+    .divTwo,
+    .divThree {
+        width: 350px !important;
+        margin-top: 20px !important;
+    }
+    .menuView-logoIcon {
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .gameButton {
+        font-size: 24px !important;
+        padding: 15px 10px !important;
+        width: 150px !important;
+    }
+    .menuView-btnStart {
+        width: 200px !important;
+    }
+    /*vista de los cards*/
+    .cardView {
+        width: 100px;
+        height: 100px;
+        margin: 2px !important;
     }
 }
