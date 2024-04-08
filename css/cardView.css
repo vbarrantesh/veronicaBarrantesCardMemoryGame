@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 160px;
-    height: 160px;
+    width: 190px;
+    height: 190px;
     background-color: var(--first-color);
     font-size: 60px;
     border-width: 5px;

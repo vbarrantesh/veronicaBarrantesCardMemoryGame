@@ -24,6 +24,7 @@
         width: 65px;
         height: 65px;
         margin: 2px !important;
+        font-size: 40px !important;
     }
 }
 
@@ -52,6 +53,7 @@
         width: 70px;
         height: 70px;
         margin: 2px !important;
+        font-size: 40px !important;
     }
 }
 
@@ -79,6 +81,7 @@
         width: 80px;
         height: 80px;
         margin: 2px !important;
+        font-size: 40px !important;
     }
 }
 
@@ -106,6 +109,7 @@
         width: 80px;
         height: 80px;
         margin: 2px !important;
+        font-size: 40px !important;
     }
 }
 
@@ -131,6 +135,7 @@
         width: 80px;
         height: 80px;
         margin: 2px !important;
+        font-size: 40px !important;
     }
 }
 
@@ -159,7 +164,7 @@
     }
 }
 
-@media (min-width: 521px) and (max-width: 576px) {
+@media (min-width: 521px) and (max-width: 575px) {
     .menuView-btnStart {
         width: 100px !important;
         padding: 20px !important;
@@ -188,7 +193,7 @@
     }
 }
 
-@media (min-width: 577px) and (max-width: 589px) {
+@media (min-width: 576px) and (max-width: 589px) {
     .menuView-btnStart {
         width: 100px !important;
         padding: 20px !important;
@@ -211,13 +216,13 @@
         padding: 5px !important;
     }
     .cardView {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
         margin: 2px !important;
     }
 }
 
-@media (min-width: 590px) and (max-width: 839px) {
+@media (min-width: 590px) and (max-width: 688px) {
     h1 {
         font-size: 30px !important;
     }
@@ -241,8 +246,98 @@
         padding: 10px 5px 10px 5px !important;
     }
     .cardView {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
+        margin: 2px !important;
+    }
+}
+
+@media (min-width: 689px) and (max-width: 744px) {
+    h1 {
+        font-size: 30px !important;
+    }
+    .divOne,
+    .divTwo,
+    .divThree {
+        width: 310px !important;
+        margin-top: 20px !important;
+    }
+    .menuView-logoIcon {
+        width: 210px !important;
+        height: 210px !important;
+    }
+    .gameButton {
+        font-size: 22px !important;
+        width: 140px !important;
+    }
+    /*vista de los cards*/
+    .playView-cardsContainer {
+        min-height: 400px !important;
+        padding: 10px 5px 10px 5px !important;
+    }
+    .cardView {
+        width: 130px;
+        height: 130px;
+        margin: 2px !important;
+    }
+}
+
+@media (min-width: 745px) and (max-width: 755px) {
+    h1 {
+        font-size: 30px !important;
+    }
+    .divOne,
+    .divTwo,
+    .divThree {
+        width: 310px !important;
+        margin-top: 20px !important;
+    }
+    .menuView-logoIcon {
+        width: 210px !important;
+        height: 210px !important;
+    }
+    .gameButton {
+        font-size: 22px !important;
+        width: 140px !important;
+    }
+    /*vista de los cards*/
+    .playView-cardsContainer {
+        min-height: 400px !important;
+        padding: 10px 5px 10px 5px !important;
+    }
+    .cardView {
+        width: 132px;
+        height: 132px;
+        margin: 2px !important;
+    }
+}
+
+@media (min-width: 756px) and (max-width: 839px) {
+    h1 {
+        font-size: 30px !important;
+    }
+    .divOne,
+    .divTwo,
+    .divThree {
+        width: 310px !important;
+        margin-top: 20px !important;
+    }
+    .menuView-logoIcon {
+        width: 210px !important;
+        height: 210px !important;
+    }
+    .gameButton {
+        font-size: 22px !important;
+        width: 140px !important;
+    }
+    /*vista de los cards*/
+    .playView-cardsContainer {
+        min-height: 400px !important;
+        padding: 10px 5px 10px 5px !important;
+    }
+    .cardView {
+        width: 100px;
+        height: 100px;
         margin: 2px !important;
     }
 }
@@ -306,32 +401,98 @@
     }
 }
 
-@media (min-width: 965px) and (max-width: 1025px) {
+@media (min-width: 965px) and (max-width: 1024px) {
     h1 {
-        font-size: 30px !important;
+        font-size: 22px !important;
     }
     .divOne,
     .divTwo,
     .divThree {
         width: 350px !important;
-        margin-top: 20px !important;
+        margin-top: 15px !important;
     }
     .menuView-logoIcon {
-        width: 250px !important;
-        height: 250px !important;
+        width: 180px !important;
+        height: 180px !important;
     }
     .gameButton {
-        font-size: 24px !important;
+        font-size: 22px !important;
         padding: 15px 10px !important;
         width: 150px !important;
     }
     .menuView-btnStart {
-        width: 200px !important;
+        width: 140px !important;
     }
     /*vista de los cards*/
+    .playView-cardsContainer {
+        min-height: 200px;
+    }
     .cardView {
         width: 100px;
         height: 100px;
         margin: 2px !important;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1089px) {
+    /*vista de los cards*/
+    .cardView {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (min-width: 1067px) and (max-width: 1198px) {
+    /*vista de los cards*/
+    .cardView {
+        width: 130px !important;
+        height: 130px !important;
+    }
+}
+
+@media (min-width: 1090px) and (max-width: 1244px) {
+    /*vista de los cards*/
+    .cardView {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
+
+@media (min-width: 1245px) and (max-width: 1333px) {
+    /*vista de los cards*/
+    .cardView {
+        width: 130px !important;
+        height: 130px !important;
+    }
+}
+
+@media (min-width: 1334px) and (max-width: 1422px) {
+    /*vista de los cards*/
+    .cardView {
+        width: 140px !important;
+        height: 140px !important;
+    }
+}
+
+@media (min-width: 1423px) and (max-width: 1700px) {
+    /*vista de los cards*/
+    .cardView {
+        width: 165px !important;
+        height: 165px !important;
+    }
+}
+
+@media (min-width: 1555px) and (max-width: 1515px) {
+    /*vista de los cards*/
+    .cardView {
+        width: 150px !important;
+        height: 150px !important;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 2024px) {
+    /*vista de los cards*/
+    .cardView {
+        font-size: 80px;
     }
 }
