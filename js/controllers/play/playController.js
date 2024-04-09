@@ -12,6 +12,8 @@ export class PlayController extends Controller {
         this.gamePlayTimer = null;
         this.gamePlayTime = 0;
         this.clicks = 0;
+        this.card1 = null;
+        this.card2 = null;
     }
 
     show(cards) {
@@ -24,46 +26,43 @@ export class PlayController extends Controller {
         }, 1000);
     }
 
-    onCardSelection() {
+    onCardSelection(cardSelected) {
+
         if (this.timeShowingTimer !== null) return;
+        if (this.card1 !== null && this.card2 !== null) return;
+        if (this.card1 !== null && this.card1.id === cardSelected.id) return;
 
-        let card1 = null;
-        let card2 = null;
+        if (this.card1 === null) {
+            this.card1 = cardSelected;
+            this.triggerShowCardEvent();
+        } else if (this.card2 === null) {
+            this.card2 = cardSelected;
+            this.triggerShowCardEvent();
 
-        for (let i = 0; i < this.cards.length; i++) {
-            const card = this.cards[i];
-
-            if (card.isSelected && card1 === null) {
-                card1 = card;
-                this.triggerShowCardEvent();
-
-            } else if (card.isSelected && card2 === null) {
-                card2 = card;
-                this.triggerShowCardEvent();
-                //El evento aca parece estar funcionando. Revision
-                this.triggerClickEvent();
-            }
         }
 
-        if (card1 !== null && card2 !== null) {
+        if (this.card1 !== null && this.card2 !== null) {
+
             this.timeShowingTimer = window.setTimeout(() => {
-                if (card1.id === card2.id) {
-                    card1.isSelected = false;
-                    card2.isSelected = false;
-                    card1.isDiscovered = true;
-                    card2.isDiscovered = true;
+                if (this.card1.emojiId === this.card2.emojiId) {
+                    this.card1.isSelected = false;
+                    this.card2.isSelected = false;
+                    this.card1.isDiscovered = true;
+                    this.card2.isDiscovered = true;
                 }
+
+                this.card1 = null;
+                this.card2 = null;
                 this.timeShowingTimer = null;
                 this.view.resetCards();
 
                 if (this.isGameComplete()) {
                     this.stopAndClearGameTimer();
-                    console.log("Game completed");
+                    console.log('GAME COMPLETE');
                 }
 
             }, 1500);
         }
-        console.log(this.cards);
     }
 
     triggerShowCardEvent() {
@@ -75,17 +74,21 @@ export class PlayController extends Controller {
             cancelable: true,
             composed: false
         });
+
         this.view.dispatchEvent(event);
+
+        //TODO: Find a better plave to trigger event.
+        this.triggerClickEvent();
     }
 
     isGameComplete() {
-        //let isGameComplete = true;
         for (let i = 0; i < this.cards.length; i++) {
             const card = this.cards[i];
             if (!card.isDiscovered) {
                 return false;
             }
         }
+
         return true;
     }
 
@@ -112,7 +115,6 @@ export class PlayController extends Controller {
             composed: false
         });
         this.view.dispatchEvent(event);
-
     }
 
     delete() {

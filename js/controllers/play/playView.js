@@ -11,7 +11,8 @@ export class PlayView extends BaseView {
         this.cardViews = [];
     }
     showCards(cards) {
-        cards.forEach(card => {
+        cards.forEach((card, i) => {
+            card.id = i;
             this.cardViews.push(new CardView(this.cardsContainer, card, this.onCardSelected.bind(this)));
         });
     }
@@ -37,12 +38,8 @@ export class PlayView extends BaseView {
         }
     }*/
 
-
-
-
-
-    onCardSelected() {
-        this.controller.onCardSelection();
+    onCardSelected(cardSelected) {
+        this.controller.onCardSelection(cardSelected);
     }
 
     resetCards() {

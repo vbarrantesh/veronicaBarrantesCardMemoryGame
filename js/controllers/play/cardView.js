@@ -4,12 +4,11 @@ export class CardView extends BaseView {
     constructor(parent, card, callback = null) {
         super(parent);
         this.card = card;
-        this.className = "cardView";
+        this.className = "cardView"
         this.onclick = () => {
-            //gsap.to(this, { scale: 1.05, duration: 0.15, ease: "expo.in", yoyo: true, repeat: 1 });
             if (callback !== null) {
                 this.card.isSelected = true;
-                callback();
+                callback(this.card);
             }
         }
 
