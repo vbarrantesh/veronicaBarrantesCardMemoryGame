@@ -1,0 +1,35 @@
+.creditsView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--background-color);
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.creditsView-logo {
+    width: 200px;
+    height: 200px;
+    background: url(../assets/images/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.creditsVIew-lbl {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.creditsVIew-info {
+    font-size: 24px;
+}
+
+.creditsVIew-info,
+.creditsVIew-lbl {
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+}

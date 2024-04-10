@@ -477,22 +477,24 @@
 @media (min-width: 1423px) and (max-width: 1700px) {
     /*vista de los cards*/
     .cardView {
-        width: 165px !important;
-        height: 165px !important;
+        width: 160px !important;
+        height: 160px !important;
     }
 }
 
+
+/*
 @media (min-width: 1555px) and (max-width: 1515px) {
-    /*vista de los cards*/
+
     .cardView {
-        width: 150px !important;
-        height: 150px !important;
+        width: 150px;
+        height: 150px;
     }
 }
 
 @media (min-width: 1025px) and (max-width: 2024px) {
-    /*vista de los cards*/
+ 
     .cardView {
         font-size: 80px;
-    }
+  
 }

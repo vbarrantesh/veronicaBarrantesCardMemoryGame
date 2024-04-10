@@ -1,12 +1,15 @@
-//import { span } from "../controller.js";
+import { div, h1, span, img } from "../../libs/html.js";
 import { BaseView } from "../../views/baseView.js";
 
 export class ScoresView extends BaseView {
     constructor(parent, controller) {
         super(parent, controller);
-        this.classList.add('menuView');
-        this.innerHTML = 'SCORES';
-        //this.classList.add("menuView");
+
+        this.className = "scoresView";
+
+        let divInstruction = div({ className: 'divInstruction' }, this);
+
+        span({ className: 'instructionTitle', innerHTML: 'Ranking by score' }, divInstruction);
     }
 }
 
