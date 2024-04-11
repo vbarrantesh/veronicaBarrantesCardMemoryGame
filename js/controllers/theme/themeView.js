@@ -11,7 +11,11 @@ export class ThemeView extends BaseView {
         let divInstruction = div({ className: 'divInstruction' }, this);
         span({ className: 'instructionTitle', innerHTML: 'Select a theme' }, divInstruction);
 
-        let containerOne = div({ className: 'themeContainer' }, this);
+        let divThemesInfo = div({ className: 'divThemesInfo' }, this);
+
+
+
+        let containerOne = div({ className: 'themeContainer' }, divThemesInfo);
         let foodTheme = div({ className: 'foodTheme' }, containerOne);
         div({ className: 'iconTheme', innerHTML: '🍓' }, foodTheme);
         let foodBtn = new GameButton(foodTheme, 'Food', () => { /*this.onMenuButtonClick(DIFFICULTY_STATE); */ });
@@ -22,7 +26,7 @@ export class ThemeView extends BaseView {
         let objectsBtn = new GameButton(objectsTheme, 'Objects', () => { /*this.onMenuButtonClick(DIFFICULTY_STATE); */ });
         objectsBtn.classList.add('themeView-objectsBtn');
 
-        let containerTwo = div({ className: 'themeContainer' }, this);
+        let containerTwo = div({ className: 'themeContainer' }, divThemesInfo);
         let facesTheme = div({ className: 'facesTheme' }, containerTwo);
         div({ className: 'iconTheme', innerHTML: '😁' }, facesTheme);
         let facesBtn = new GameButton(facesTheme, 'Objects', () => { /*this.onMenuButtonClick(DIFFICULTY_STATE); */ });
