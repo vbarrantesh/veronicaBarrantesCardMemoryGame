@@ -4,7 +4,9 @@ export class CardView extends BaseView {
     constructor(parent, card, callback = null) {
         super(parent);
         this.card = card;
-        this.className = "cardView"
+        this.className = "cardView";
+        this.didShowDiscoverAnimation = false;
+
         this.onclick = () => {
             if (callback !== null) {
                 this.card.isSelected = true;
@@ -20,20 +22,49 @@ export class CardView extends BaseView {
     }
 
     show() {
-        gsap.to(this, { scale: 1.1, duration: 0.15, ease: "expo.in", yoyo: true, repeat: 1 });
-        this.innerHTML = this.card.emoji;
+        gsap.to(this, {
+            rotationY: 180,
+            duration: 0.5,
+            ease: "expo.in",
+            onComplete: () => {
+                this.innerHTML = this.card.emoji;
+            }
+        });
     }
 
     hide() {
         this.card.isSelected = false;
-        this.innerHTML = '';
+        gsap.to(this, {
+            rotationY: 0,
+            duration: 0.5,
+            ease: "expo.in",
+            onComplete: () => {
+
+                this.innerHTML = '';
+            }
+
+        });
+
     }
 
     reset() {
+
         if (this.card.isDiscovered) {
+            if (this.didShowDiscoverAnimation) return;
+            this.didShowDiscoverAnimation = true;
+
+            gsap.to(this, { duration: 0.1, ease: "bounce.out", scale: 1.1, yoyo: true, repeat: 5 });
+
             this.classList.add('cardView-isDiscovered');
         } else {
             this.hide();
+        }
+    }
+
+    playHappy() {
+
+        if (this.card.isDiscovered) {
+            gsap.to(this, { duration: 0.1, ease: "bounce.out", scale: 1.1, yoyo: true, repeat: 5 });
         }
     }
 }

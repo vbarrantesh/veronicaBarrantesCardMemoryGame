@@ -48,6 +48,12 @@ export class PlayView extends BaseView {
         });
     }
 
+    playHappyCards() {
+        this.cardViews.forEach(cardView => {
+            cardView.playHappy();
+        });
+    }
+
 }
 
 customElements.define('play-view', PlayView);

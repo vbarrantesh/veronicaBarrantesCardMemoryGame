@@ -3,10 +3,11 @@ import { LoadingController } from "../controllers/loading/loadingController.js";
 import { MenuController } from "../controllers/menu/menuController.js";
 import { PlayController } from "../controllers/play/playController.js";
 import { CreditsController } from "../controllers/credits/creditsController.js";
-import { DifficultyView } from "../controllers/difficulty/difficultyView.js";
+//import { DifficultyView } from "../controllers/difficulty/difficultyView.js";
 import { ThemeController } from "../controllers/theme/themeController.js";
 import { ScoresController } from "../controllers/scores/scoresController.js";
 import { LoginController } from "../controllers/login/loginController.js";
+import { DifficultyController } from "../controllers/difficulty/difficultyController.js";
 
 export class GameManager {
     constructor() {
@@ -49,7 +50,7 @@ export class GameManager {
         this.mainContainer.addEventListener('goto-state', (event) => {
             this.goto(event.detail.state);
         });
-
+        this.checkLocalStorage;
         this.goto(LOADING_STATE);
 
         //this.goto(PLAY_STATE);
@@ -102,7 +103,7 @@ export class GameManager {
                 break;
             case DIFFICULTY_STATE:
                 this.appTitle.innerHTML = 'LEVEL';
-                this.currentController = new DifficultyView(this.contentContainer);
+                this.currentController = new DifficultyController(this.contentContainer);
                 break;
             case RESULTS_STATE:
 
@@ -135,9 +136,17 @@ export class GameManager {
         this.clicksLbl.innerHTML = 0;
         this.goto(PLAY_STATE);
     }
+    checkLocalStorage() {
+        if (!localStorage.getItem('theme')) {
+            localStorage.setItem('theme', THEME_FACES);
+        }
 
-
+        if (!localStorage.getItem('difficulty')) {
+            localStorage.setItem('difficulty', DIFFICULTY_MED);
+        }
+    }
 }
+
 
 export const LOADING_STATE = 0;
 export const MENU_STATE = 1;
@@ -149,3 +158,12 @@ export const THEME_STATE = 6;
 export const DIFFICULTY_STATE = 7;
 export const RESULTS_STATE = 8;
 export const PLAY_STATE = 9;
+
+export const THEME_FACES = 'faces';
+export const THEME_FOOD = 'food';
+export const THEME_OBJECTS = 'objects';
+export const THEME_ANIMALS = 'animals';
+
+export const DIFFICULTY_LOW = 4;
+export const DIFFICULTY_MED = 8;
+export const DIFFICULTY_HIGH = 12;

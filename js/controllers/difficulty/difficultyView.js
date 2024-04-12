@@ -1,5 +1,7 @@
 import { div, span } from "../../libs/html.js";
 import { BaseView } from "../../views/baseView.js";
+import { DIFFICULTY_HIGH, DIFFICULTY_LOW, DIFFICULTY_MED, MENU_STATE } from "../../managers/gameManager.js";
+import { GameButton } from "../../views/gameButton.js";
 
 export class DifficultyView extends BaseView {
     constructor(parent, controller) {
@@ -14,30 +16,45 @@ export class DifficultyView extends BaseView {
 
         let easyLevel = div({ className: 'divLevel' }, levelContainer);
         div({ className: 'easyStars' }, easyLevel);
-        div({ className: 'easyLbl', innerHTML: 'Easy' }, easyLevel);
+
+        //let easyLbl = div({ className: 'easyLblDiv' /*innerHTML: 'Easy'*/ }, easyLevel);
+
+        let easyLbl = div({ className: 'easyLblDiv' }, easyLevel);
+        let easyBtn = new GameButton(easyLbl, 'Easy', () => { this.onGameButtonClick(DIFFICULTY_LOW); });
+        easyBtn.classList.add('easyLbl');
 
 
         let normalLevel = div({ className: 'divLevel' }, levelContainer);
         div({ className: 'normalStars' }, normalLevel);
-        div({ className: 'normalLbl', innerHTML: 'Normal' }, normalLevel);
+        // let normalLbl = div({ className: 'normalLblDiv' /*innerHTML: 'Normal'*/ }, normalLevel);
+        let normalLbl = div({ className: 'normalLblDiv' }, normalLevel);
+
+        let normalBtn = new GameButton(normalLbl, 'Normal', () => { this.onGameButtonClick(DIFFICULTY_MED); });
+        normalBtn.classList.add('normalLbl');
 
         let hardLevel = div({ className: 'divLevel' }, levelContainer);
         div({ className: 'hardStars' }, hardLevel);
-        div({ className: 'hardLbl', innerHTML: 'Hard' }, hardLevel);
 
+        //let hardLbl = div({ className: 'hardLblDiv' /*innerHTML: 'Hard' */ }, hardLevel);
 
-        /*
-                this.divStarContainer = div({ className: 'divStarContainer' }, this.levelContainer);
+        let hardLbl = div({ className: 'hardLblDiv' }, hardLevel);
+        let hardBtn = new GameButton(hardLbl, 'Hard', () => { this.onGameButtonClick(DIFFICULTY_HIGH); });
+        hardBtn.classList.add('hardLbl');
 
+    }
 
-                let star2 = div({ className: 'star full' }, this.divStarContainer);
-                let star3 = div({ className: 'star empty' }, this.divStarContainer);
+    onGameButtonClick(difficulty) {
+        this.controller.saveDifficulty(difficulty);
 
-                // Agregar el texto "Easy"
-                div("Easy", this.levelContainer);
-
-                // Agregar el contenedor principal al elemento 'parent' proporcionado
-                this.parent.appendChild(this.levelContainer);*/
+        let event = new CustomEvent('goto-state', {
+            detail: {
+                state: MENU_STATE
+            },
+            bubbles: true,
+            cancelable: true,
+            composed: false
+        });
+        this.dispatchEvent(event);
     }
 }
 

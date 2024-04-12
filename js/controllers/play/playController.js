@@ -57,8 +57,10 @@ export class PlayController extends Controller {
                 this.view.resetCards();
 
                 if (this.isGameComplete()) {
+                    this.saveScore();
                     this.stopAndClearGameTimer();
                     console.log('GAME COMPLETE');
+                    this.view.playHappyCards();
                 }
 
             }, 1500);
@@ -125,5 +127,10 @@ export class PlayController extends Controller {
     stopAndClearGameTimer() {
         window.clearInterval(this.gamePlayTimer);
         this.gamePlayTimer = null;
+    }
+
+    saveScore() {
+        console.log('GAME COMPLETE');
+
     }
 }

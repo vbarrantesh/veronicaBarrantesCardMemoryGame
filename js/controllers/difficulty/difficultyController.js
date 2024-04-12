@@ -6,4 +6,9 @@ export class DifficultyController extends Controller {
         super(parent);
         this.view = new DifficultyView(parent, this);
     }
+
+    saveDifficulty(difficulty) {
+        localStorage.setItem('difficulty', difficulty);
+    }
+
 }

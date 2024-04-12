@@ -6,4 +6,8 @@ export class ThemeController extends Controller {
         super(parent);
         this.view = new ThemeView(parent, this);
     }
+
+    saveTheme(theme) {
+        localStorage.setItem('theme', theme);
+    }
 }
