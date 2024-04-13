@@ -57,9 +57,8 @@ export class PlayController extends Controller {
                 this.view.resetCards();
 
                 if (this.isGameComplete()) {
-                    this.saveScore();
                     this.stopAndClearGameTimer();
-                    console.log('GAME COMPLETE');
+                    this.saveScore();
                     this.view.playHappyCards();
                 }
 

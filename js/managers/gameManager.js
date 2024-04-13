@@ -109,6 +109,8 @@ export class GameManager {
 
                 break;
             case PLAY_STATE:
+                this.timeLbl.innerHTML = 0;
+                this.clicksLbl.innerHTML = 0;
                 this.appTitle.classList.add('hidden');
                 //this.navbarElements.classList.add('hidden');
                 this.hudColumn1.classList.remove('hidden');

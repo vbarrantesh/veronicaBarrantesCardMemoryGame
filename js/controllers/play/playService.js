@@ -5,7 +5,9 @@ export class PlayService {
     }
     getData() {
         let theme = localStorage.getItem('theme');
+        console.log(theme);
         let difficulty = localStorage.getItem('difficulty');
+        console.log(difficulty);
 
         fetch(`http://localhost:4000/cards/${difficulty}/${theme}`).then(response => {
             response.json().then(data => {
