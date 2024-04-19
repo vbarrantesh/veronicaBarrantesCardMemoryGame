@@ -1,5 +1,6 @@
 import { div, h1, span, img } from "../../libs/html.js";
 import { BaseView } from "../../views/baseView.js";
+import { ScoreView } from "./scoreView.js";
 
 export class ScoresView extends BaseView {
     constructor(parent, controller) {
@@ -10,6 +11,14 @@ export class ScoresView extends BaseView {
         let divInstruction = div({ className: 'divInstruction' }, this);
 
         span({ className: 'instructionTitle', innerHTML: 'Ranking by score' }, divInstruction);
+    }
+
+    showScores(scores) {
+
+        scores.forEach(score => {
+            let scoreView = new ScoreView(this, score);
+
+        });
     }
 }
 

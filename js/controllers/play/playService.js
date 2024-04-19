@@ -21,10 +21,13 @@ export class PlayService {
         });
     }
 
-    /*sendScore() {
-        fetch('url /data/', config).then(response => {
-            console.log(response);
-        });
-
-    }*/
+    /* sendScore(score) {
+         let config = {
+             method: 'POST',
+             body: JSON.stringify(score),
+         }
+         fetch(`https://veronicbarrantescardmemorygame-default-rtdb.firebaseio.com/data/.json`, config).then(response => {
+             console.log(response);
+         });
+     }*/
 }

@@ -28,7 +28,7 @@ export class ThemeView extends BaseView {
         let containerTwo = div({ className: 'themeContainer' }, divThemesInfo);
         let facesTheme = div({ className: 'facesTheme' }, containerTwo);
         div({ className: 'iconTheme', innerHTML: '😁' }, facesTheme);
-        let facesBtn = new GameButton(facesTheme, 'Objects', () => { this.onGameButtonClick(THEME_FACES); });
+        let facesBtn = new GameButton(facesTheme, 'Faces', () => { this.onGameButtonClick(THEME_FACES); });
         facesBtn.classList.add('themeView-facesBtn');
 
 

@@ -129,7 +129,24 @@ export class PlayController extends Controller {
     }
 
     saveScore() {
-        console.log('GAME COMPLETE');
+        let endTimer = window.setTimeout(() => {
+            window.clearTimeout(endTimer);
+            console.log('GAME COMPLETE');
+            let difficulty = Number(localStorage.getItem('difficulty'));
+            let username = localStorage.getItem('username');
+            let score = { score: (this.clicks + this.gamePlayTime), clicks: this.clicks, time: this.gamePlayTime, difficlty: difficulty, username: username ? username : '' }; //falta operador ternario
+            //clicks: this.clicks, time: this.gamePlayTime, difficulty: difficulty
 
+            let event = new CustomEvent('goto-end-state', {
+                detail: {
+                    score: score
+                },
+                bubbles: true,
+                cancelable: true,
+                composed: false
+            });
+            this.view.dispatchEvent(event);
+        }, 2000)
     }
+
 }

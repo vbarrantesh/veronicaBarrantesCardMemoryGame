@@ -8,6 +8,8 @@ import { ThemeController } from "../controllers/theme/themeController.js";
 import { ScoresController } from "../controllers/scores/scoresController.js";
 import { LoginController } from "../controllers/login/loginController.js";
 import { DifficultyController } from "../controllers/difficulty/difficultyController.js";
+import { EndController } from "../controllers/end/endController.js";
+import { EndView } from "../controllers/end/endView.js";
 
 export class GameManager {
     constructor() {
@@ -35,6 +37,8 @@ export class GameManager {
         this.resetBtn = div({ className: 'navbarContainer-resetBtn hidden', innerHTML: 'Reset', onclick: this.onResetBtn.bind(this) }, this.navbarElements);
         //div({ className: 'navbarContainer-resetTitle', innerHTML: 'Reset' }, this.resetBtn);
 
+        this.score = null;
+
         this.mainContainer.addEventListener('loading-completed', (event) => {
             this.loadingCompleted();
         });
@@ -50,11 +54,18 @@ export class GameManager {
         this.mainContainer.addEventListener('goto-state', (event) => {
             this.goto(event.detail.state);
         });
+        this.mainContainer.addEventListener('goto-end-state', (event) => {
+            this.score = event.detail.score;
+            this.goto(END_STATE);
+        });
         this.checkLocalStorage;
-        this.goto(LOADING_STATE);
+        //this.goto(LOADING_STATE);
 
         //this.goto(PLAY_STATE);
         //this.goto(CREDITS_STATE);
+        this.score = { username: 'Brayan', score: 43, clicks: 21, time: 12, difficulty: 2 };
+        //this.goto(END_STATE);
+        this.goto(SCORES_STATE);
     }
 
     goto(state) {
@@ -63,7 +74,7 @@ export class GameManager {
             this.currentController = null;
         }
 
-        if (state === MENU_STATE || state === LOADING_STATE) {
+        if (state === MENU_STATE || state === LOADING_STATE || state === END_STATE) {
             this.backBtn.classList.add('hidden');
             this.appTitle.classList.remove('hidden');
             this.hudColumn1.classList.add('hidden');
@@ -116,7 +127,13 @@ export class GameManager {
                 this.hudColumn1.classList.remove('hidden');
                 this.hudColumn2.classList.remove('hidden');
                 this.resetBtn.classList.remove('hidden');
+                this.resetHub();
                 this.currentController = new PlayController(this.contentContainer);
+                break;
+
+            case END_STATE:
+                this.appTitle.innerHTML = 'Game Completed';
+                this.currentController = new EndController(this.contentContainer, this.score);
                 break;
 
             default:
@@ -134,9 +151,15 @@ export class GameManager {
     }
 
     onResetBtn() {
+        this.resetHub()
+            // this.timeLbl.innerHTML = 0;
+            // this.clicksLbl.innerHTML = 0;
+        this.goto(PLAY_STATE);
+    }
+
+    resetHub() {
         this.timeLbl.innerHTML = 0;
         this.clicksLbl.innerHTML = 0;
-        this.goto(PLAY_STATE);
     }
     checkLocalStorage() {
         if (!localStorage.getItem('theme')) {
@@ -160,6 +183,7 @@ export const THEME_STATE = 6;
 export const DIFFICULTY_STATE = 7;
 export const RESULTS_STATE = 8;
 export const PLAY_STATE = 9;
+export const END_STATE = 10;
 
 export const THEME_FACES = 'faces';
 export const THEME_FOOD = 'food';
