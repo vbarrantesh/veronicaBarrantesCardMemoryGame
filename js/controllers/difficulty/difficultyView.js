@@ -17,7 +17,7 @@ export class DifficultyView extends BaseView {
         let easyLevel = div({ className: 'divLevel' }, levelContainer);
         div({ className: 'easyStars' }, easyLevel);
 
-        //let easyLbl = div({ className: 'easyLblDiv' /*innerHTML: 'Easy'*/ }, easyLevel);
+        //let easyLbl = div({ className: 'easyLblDiv' /*innerHTML: 'Easy' }, easyLevel);
 
         let easyLbl = div({ className: 'easyLblDiv' }, easyLevel);
         let easyBtn = new GameButton(easyLbl, 'Easy', () => { this.onGameButtonClick(DIFFICULTY_LOW); });

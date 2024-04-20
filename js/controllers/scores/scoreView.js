@@ -7,28 +7,30 @@ export class ScoreView extends BaseView {
 
         this.className = "scoreView";
         this.show(score);
-
-        // let divInstruction = div({ className: 'divInstruction' }, this);
-
-        // span({ className: 'instructionTitle', innerHTML: 'Ranking by score' }, divInstruction);
     }
 
     show(score) {
         console.log(score);
-        let row1 = div({ className: 'scoreView-row1', innerHTML: score.username }, this);
-        let row2 = div({ className: 'scoreView-row2' }, this);
+        let scoreContainer = div({ className: 'scoreView-scoreContainer' }, this);
 
-        let col1 = div({ className: 'scoreView-col' }, row2);
-        span({ className: 'scoreView-title', innerHTML: 'SCORE' }, col1)
-        span({ className: 'scoreView-value', innerHTML: score.score }, col1)
+        div({ className: 'scoreView-col1', innerHTML: score.username }, scoreContainer);
 
-        let col2 = div({ className: 'scoreView-col' }, row2);
-        span({ className: 'scoreView-title', innerHTML: 'CLICKS' }, col2)
-        span({ className: 'scoreView-value', innerHTML: score.clicks }, col2)
+        div({ className: 'scoreView-col2' }, scoreContainer);
 
-        let col3 = div({ className: 'scoreView-col' }, row2);
-        span({ className: 'scoreView-title', innerHTML: 'TIME' }, col3)
-        span({ className: 'scoreView-value', innerHTML: score.time }, col3)
+        let col3 = div({ className: 'scoreView-col3' }, scoreContainer);
+
+        let row1 = div({ className: 'scoreView-col' }, col3);
+        span({ className: 'scoreView-info', innerHTML: 'Time:' }, row1);
+        span({ className: 'scoreView-value', innerHTML: score.time }, row1)
+
+        let row2 = div({ className: 'scoreView-col' }, col3);
+        span({ className: 'scoreView-title', innerHTML: 'Clicks:' }, row2)
+        span({ className: 'scoreView-value', innerHTML: score.clicks }, row2)
+
+        let row3 = div({ className: 'scoreView-col' }, col3);
+        span({ className: 'scoreView-title', innerHTML: 'Score:' }, row3)
+        span({ className: 'scoreView-value', innerHTML: score.score }, row3)
+
     }
 }
 

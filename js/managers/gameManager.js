@@ -60,12 +60,13 @@ export class GameManager {
         });
         this.checkLocalStorage;
         //this.goto(LOADING_STATE);
+        this.goto(DIFFICULTY_STATE);
 
         //this.goto(PLAY_STATE);
         //this.goto(CREDITS_STATE);
         this.score = { username: 'Brayan', score: 43, clicks: 21, time: 12, difficulty: 2 };
         //this.goto(END_STATE);
-        this.goto(SCORES_STATE);
+        //this.goto(SCORES_STATE);
     }
 
     goto(state) {
