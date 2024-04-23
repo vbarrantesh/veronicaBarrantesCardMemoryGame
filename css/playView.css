@@ -13,10 +13,10 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: #4D4D4D;
+    /*background-color: #4D4D4D;*/
     /*camnhiar*/
     width: 90%;
-    min-height: 600px;
+    min-height: 300px;
     padding: 15px 10px 15px 10px;
 }
 

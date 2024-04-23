@@ -15,7 +15,6 @@
         font-size: 18px !important;
         padding: 15px 10px !important;
     }
-
     .playView-cardsContainer {
         min-height: 400px !important;
         padding: 10px 5px 10px 5px !important;
@@ -44,7 +43,6 @@
     .gameButton {
         font-size: 18px !important;
     }
-
     .playView-cardsContainer {
         padding-top: 10px;
         padding-bottom: 10px;
@@ -73,7 +71,6 @@
     .gameButton {
         font-size: 18px !important;
     }
-
     .playView-cardsContainer {
         padding: 0px 10px 0px 10px !important;
     }
@@ -101,7 +98,6 @@
     .gameButton {
         font-size: 18px !important;
     }
-
     .playView-cardsContainer {
         padding: 10px 5px 10px 5px !important;
     }
@@ -130,7 +126,6 @@
         height: 10px;
         width: 140px !important;
     }
-
     .cardView {
         width: 80px;
         height: 80px;
@@ -156,7 +151,6 @@
         height: 10px;
         width: 140px !important;
     }
- 
     .cardView {
         width: 90px;
         height: 90px;
@@ -164,7 +158,7 @@
     }
 }
 
-@media (min-width: 521px) and (max-width: 575px) {
+@media (min-width: 521px) and (max-width: 576px) {
     .menuView-btnStart {
         width: 100px !important;
         padding: 20px !important;
@@ -181,7 +175,6 @@
         height: 10px;
         width: 140px !important;
     }
-
     .playView-cardsContainer {
         min-height: 400px !important;
         padding: 5px !important;
@@ -193,7 +186,7 @@
     }
 }
 
-@media (min-width: 576px) and (max-width: 589px) {
+@media (min-width: 577px) and (max-width: 588px) {
     .menuView-btnStart {
         width: 100px !important;
         padding: 20px !important;
@@ -210,19 +203,18 @@
         height: 10px;
         width: 140px !important;
     }
-
     .playView-cardsContainer {
         min-height: 400px !important;
         padding: 5px !important;
     }
     .cardView {
-        width: 120px;
-        height: 120px;
+        width: 105px;
+        height: 100px;
         margin: 2px !important;
     }
 }
 
-@media (min-width: 590px) and (max-width: 688px) {
+@media (min-width: 589px) and (max-width: 657px) {
     h1 {
         font-size: 30px !important;
     }
@@ -240,14 +232,42 @@
         font-size: 22px !important;
         width: 140px !important;
     }
+    .playView-cardsContainer {
+        min-height: 400px !important;
+        padding: 10px 5px 10px 5px !important;
+    }
+    .cardView {
+        width: 115px;
+        height: 95px;
+        margin: 2px !important;
+    }
+}
 
+@media (min-width: 658px) and (max-width: 688px) {
+    h1 {
+        font-size: 30px !important;
+    }
+    .divOne,
+    .divTwo,
+    .divThree {
+        width: 310px !important;
+        margin-top: 20px !important;
+    }
+    .menuView-logoIcon {
+        width: 210px !important;
+        height: 210px !important;
+    }
+    .gameButton {
+        font-size: 22px !important;
+        width: 140px !important;
+    }
     .playView-cardsContainer {
         min-height: 400px !important;
         padding: 10px 5px 10px 5px !important;
     }
     .cardView {
         width: 120px;
-        height: 120px;
+        height: 98px;
         margin: 2px !important;
     }
 }
@@ -270,19 +290,18 @@
         font-size: 22px !important;
         width: 140px !important;
     }
-
     .playView-cardsContainer {
         min-height: 400px !important;
         padding: 10px 5px 10px 5px !important;
     }
     .cardView {
         width: 130px;
-        height: 130px;
+        height: 97px;
         margin: 2px !important;
     }
 }
 
-@media (min-width: 745px) and (max-width: 755px) {
+@media (min-width: 745px) and (max-width: 772px) {
     h1 {
         font-size: 30px !important;
     }
@@ -300,19 +319,18 @@
         font-size: 22px !important;
         width: 140px !important;
     }
-
     .playView-cardsContainer {
         min-height: 400px !important;
         padding: 10px 5px 10px 5px !important;
     }
     .cardView {
-        width: 132px;
-        height: 132px;
+        width: 135px;
+        height: 98px;
         margin: 2px !important;
     }
 }
 
-@media (min-width: 756px) and (max-width: 839px) {
+@media (min-width: 773px) and (max-width: 839px) {
     h1 {
         font-size: 30px !important;
     }
@@ -330,14 +348,13 @@
         font-size: 22px !important;
         width: 140px !important;
     }
-
     .playView-cardsContainer {
         min-height: 400px !important;
         padding: 10px 5px 10px 5px !important;
     }
     .cardView {
-        width: 100px;
-        height: 100px;
+        width: 138px;
+        height: 98px;
         margin: 2px !important;
     }
 }
@@ -364,7 +381,6 @@
     .menuView-btnStart {
         width: 200px !important;
     }
-
     .cardView {
         width: 110px;
         height: 110px;
@@ -393,7 +409,6 @@
     .menuView-btnStart {
         width: 200px !important;
     }
-
     .cardView {
         width: 120px;
         height: 120px;
@@ -423,19 +438,13 @@
     .menuView-btnStart {
         width: 140px !important;
     }
-
-    .playView-cardsContainer {
-        min-height: 200px;
-    }
     .cardView {
-        width: 100px;
-        height: 100px;
-        margin: 2px !important;
+        width: 120px;
+        height: 120px;
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1089px) {
-
     .cardView {
         width: 130px;
         height: 130px;
@@ -443,7 +452,6 @@
 }
 
 @media (min-width: 1067px) and (max-width: 1198px) {
-
     .cardView {
         width: 130px !important;
         height: 130px !important;
@@ -451,15 +459,13 @@
 }
 
 @media (min-width: 1090px) and (max-width: 1244px) {
-
     .cardView {
-        width: 120px !important;
-        height: 120px !important;
+        width: 115px !important;
+        height: 115px !important;
     }
 }
 
 @media (min-width: 1245px) and (max-width: 1333px) {
-
     .cardView {
         width: 130px !important;
         height: 130px !important;
@@ -467,7 +473,6 @@
 }
 
 @media (min-width: 1334px) and (max-width: 1422px) {
-   
     .cardView {
         width: 140px !important;
         height: 140px !important;
@@ -475,7 +480,6 @@
 }
 
 @media (min-width: 1423px) and (max-width: 1700px) {
-    
     .cardView {
         width: 160px !important;
         height: 160px !important;
@@ -500,4 +504,4 @@
     .cardView {
         font-size: 80px;
   
-}
+}*/
